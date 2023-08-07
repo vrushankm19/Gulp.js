@@ -1,0 +1,94 @@
+// ---------This JS Code For Slider Arrow------------------
+// prevArrow: "<button type='button' class='btn slick-l-left'><i class='fa-solid fa-arrow-left'></i></button>",
+// nextArrow: "<button type='button' class='btn slick-r-right'><i class='fa-solid fa-arrow-right'></i></button>",
+// ---------------------------
+// __________________slider left and right side sheet hide other slider_____________
+@mixin sheet-l-hide($sheetcolor, $lrsheet, $leftsh:17px) {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color: $sheetcolor;
+    top: 0;
+    #{$lrsheet}: calc(100% + $leftsh); //right and left 
+    z-index: 1000;
+}
+
+// __________________Arrow Button _____________
+@mixin slider-c {
+    .slick-l-left,
+    .slick-r-right {
+        @include w-h(66px);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 100rem;
+        @include tm-c();
+        z-index: 999;
+        // background-color: $sc;
+        // color: #fff;
+        font-size: 24px;
+        i:hover {
+            // color: unset;
+        }
+    }
+    .slick-l-left.slick-disabled,
+    .slick-r-right.slick-disabled {
+        // background-color: #fff;
+        // color: #000;
+    }
+    .slick-l-left {
+        left: 0;
+        transform: translate(calc(-50%), -50%);
+         :hover {
+            // color: #fff;
+        }
+    }
+    .slick-r-right {
+        right: 0;
+        left: unset;
+        transform: translate(calc(50%), -50%);
+    }
+    .slick-l-left:hover,
+    .slick-r-right:hover {
+        // color: #fff;
+    }
+}
+
+// __________________Arrow Bottom Center_____________
+@mixin slider-b {
+    .slick-arrow {
+        bottom: 0;
+    }
+    .slick-l-left {
+        left: 50%;
+        transform: translate(calc(-100% + -10px), -10px);
+    }
+    .slick-r-right {
+        right: 50%;
+        transform: translate(calc(100% + 10px), -10px);
+    }
+}
+
+// __________________Slide Gap_____________
+@mixin slider-gap($slide-gap) {
+    .slick-slider {
+        margin: 0 -#{$slide-gap};
+    }
+    .slick-slide {
+        margin-right: #{$slide-gap};
+        margin-left: #{$slide-gap};
+    }
+}
+
+// .rr{
+//     @include slider-gap(19px);
+// }
+// __________________Same Height in Every Slide_____________
+@mixin slider-h() {
+    .slick-track {
+        display: flex !important;
+    }
+    .slick-slide {
+        height: auto;
+    }
+}

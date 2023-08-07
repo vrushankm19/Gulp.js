@@ -1,0 +1,50 @@
+@mixin bg-i-ab-same {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin bg-i-ab($imgabb) {
+    position: relative;
+    &#{$imgabb} {
+        @include bg-i-ab-same();
+    }
+}
+
+@mixin bg-i-ab-con($imgab:-img, $imgcon:-con) {
+    position: relative;
+    &#{$imgab} {
+        @include bg-i-ab-same();
+    }
+    &#{$imgcon} {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// @mixin bg-i-both($imgg,$imgab, $imgcon) {
+//     position: relative;
+//     &#{$imgg}{
+//         position: absolute;
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//     }
+//     &#{$imgab} {
+        
+//     }
+//     &#{$imgcon} {
+//         position: relative;
+//         z-index: 1;
+//     }
+// }

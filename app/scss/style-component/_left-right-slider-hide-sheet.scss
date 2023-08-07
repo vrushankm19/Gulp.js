@@ -1,0 +1,11 @@
+@mixin sheet-l-hide($sheetcolor, $leftsh:17px) {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color: $sheetcolor;
+    top: 0;
+    right: calc(100% + $leftsh);
+    z-index: 1000;
+}

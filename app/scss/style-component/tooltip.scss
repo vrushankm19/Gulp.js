@@ -1,0 +1,73 @@
+// <div class="box">
+//   <div class="link">
+//     <a href="#" onclick="return false;">New York City</a>
+//     <div class="tooltip">United States</div>
+//   </div>
+//   <div class="button">
+//     <button>Tokyo</button>
+//     <div class="tooltip">Japan</div>
+//   </div>
+// </div>
+
+@mixin tooltip($class-name: tooltip) {
+  .#{$class-name} {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 2.75em;
+    transform: translateX(-50%);
+    width: max-content;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    background-color: rgba(0 0 0 / 55%);
+    backdrop-filter: blur(2px) invert(80%);
+    color: #eee;
+    font-size: 0.8em;
+    opacity: 0;
+    scale: 0;
+    transition: opacity, scale 0.3s;
+    transform-origin: left bottom;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -0.35em;
+      transform: translateX(-50%);
+      border: 0.35em solid rgb(0 0 0 / 0%);
+      border-top-color: #000;
+      border-bottom-width: 0;
+    }
+  }
+
+  &:hover {
+    .#{$class-name} {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
+// * {
+//   font-size: inherit;
+// }
+
+// .box {
+//   display: flex;
+//   justify-content: space-evenly;
+//   margin: 5em auto;
+//   width: 100%;
+//   font-size: 2em;
+// }
+
+// .button {
+//   position: relative;
+
+//   @include tooltip;
+// }
+
+// .link {
+//   position: relative;
+
+//   @include tooltip;
+// }
