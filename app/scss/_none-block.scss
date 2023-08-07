@@ -1,14 +1,23 @@
 /*/////////////////////////// D-NONE D-BLOCK in Media /////////////////*/
 
+<<<<<<< HEAD
 @mixin max-none-block($display) {
   @include max($display) {
       @include config-class(
       "#{$display}",
+=======
+@include max(d-1024) {
+    /*Show and Hide*/
+  
+    @include config-class(
+      "d-1024-",
+>>>>>>> 05f6f03 (My Gulp.js V3)
       display,
       "none" none,
       "none-i" none + !important,
       "block" block,
       "block-i" block + !important
+<<<<<<< HEAD
       );
   }
 }
@@ -16,11 +25,22 @@
   @include minmax($display , $display2) {
       @include config-class(
       "#{$display}",
+=======
+    );
+  }
+  
+  @include max(d-991) {
+    /*Show and Hide*/
+  
+    @include config-class(
+      "d-991-",
+>>>>>>> 05f6f03 (My Gulp.js V3)
       display,
       "none" none,
       "none-i" none + !important,
       "block" block,
       "block-i" block + !important
+<<<<<<< HEAD
       );
   }
 }
@@ -35,3 +55,110 @@
 @include max-none-block(d-600);
 @include max-none-block(d-480);
 @include max-none-block(d-375);
+=======
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include minmax(d-991, d-1024) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-991T1024-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include minmax(d-768, d-1024) {
+    @include config-class(
+      "d-768T1024-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  /*Show and Hide*/
+  
+  @include max(d-768) {
+    @include config-class(
+      "d-768-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include max(d-767) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-767-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include max(d-600) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-600-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  /*land*/
+  
+  @include max(d-480) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-480-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include max(d-375) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-375-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+>>>>>>> 05f6f03 (My Gulp.js V3)
