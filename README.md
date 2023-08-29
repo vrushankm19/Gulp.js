@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="200" src="https://nystudio107.com/img/blog/_1200x675_crop_center-center_82_line/gulp-logo.jpg.webp" alt="Gulp.js Logo" />
+  <img height="150" src="https://nystudio107.com/img/blog/_1200x675_crop_center-center_82_line/gulp-logo.jpg.webp" alt="Gulp.js Logo" />
 </div>
 
 # Gulp.js Project
@@ -11,7 +11,7 @@ Welcome to my Gulp.js project! This repository contains various tools and config
 
 - [SCSS Mixin Collection](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/_mixins.scss) ⭐
 - [Background Image Mixin SCSS](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/style-component/_background-img-using-absolute.scss)
-- [SVG animation in Loop](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/style-component/_svg-fade-in-animation.scss) ⭐
+- [SVG animation in Loop using SCSS](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/style-component/_svg-fade-in-animation.scss) ⭐
 
 ## About
 
