@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="300" src="https://nystudio107.com/img/blog/_1200x675_crop_center-center_82_line/gulp-logo.jpg.webp" alt="Gulp.js Logo" />
+  <img height="200" src="https://nystudio107.com/img/blog/_1200x675_crop_center-center_82_line/gulp-logo.jpg.webp" alt="Gulp.js Logo" />
 </div>
 
 # Gulp.js Project
