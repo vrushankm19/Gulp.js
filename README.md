@@ -6,9 +6,11 @@
 
 Welcome to my Gulp.js project! This repository contains various tools and configurations to streamline my front-end development workflow using Gulp.js.
 
-## SCSS Mixin Collection
+## SCSS Mixin Collection ⭐
 
-- [My SCSS Mixin Collection](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/_mixins.scss)
+- [SCSS Mixin Collection](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/_mixins.scss) ⭐
+- [Background Image Mixin SCSS](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/style-component/_background-img-using-absolute.scss)
+- [SVG animation in Loop](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/style-component/_svg-fade-in-animation.scss) ⭐
 
 ## About
 
