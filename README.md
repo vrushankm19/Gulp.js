@@ -6,14 +6,9 @@
 
 Welcome to my Gulp.js project! This repository contains various tools and configurations to streamline my front-end development workflow using Gulp.js.
 
-## Table of Contents
+## SCSS Mixin Collection
 
-- [About](#about)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [SCSS Mixin Collection](#scss-mixin-collection)
-- [Contributing](#contributing)
-- [License](#license)
+- [My SCSS Mixin Collection](https://github.com/vrushankm19/Gulp.js/blob/main/app/scss/_mixins.scss)
 
 ## About
 
