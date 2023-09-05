@@ -31,4 +31,4 @@ To get started with this project, follow these steps:
 To run the default Gulp tasks and start the development workflow, simply run the following command:
 
 ```bash
-npm run gulp
+gulp
