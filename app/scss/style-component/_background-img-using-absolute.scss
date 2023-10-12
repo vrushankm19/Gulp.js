@@ -1,4 +1,4 @@
-@mixin bg-i-ab-same {
+@mixin img-ab {
     position: absolute;
     display: block;
     width: 100%;
@@ -13,14 +13,14 @@
 @mixin bg-i-ab($imgabb) {
     position: relative;
     &#{$imgabb} {
-        @include bg-i-ab-same();
+        @include img-ab();
     }
 }
 
-@mixin bg-i-ab-con($imgab:-img, $imgcon:-con) {
+@mixin img-ab-bg($imgab:-img, $imgcon:-con) {
     position: relative;
     &#{$imgab} {
-        @include bg-i-ab-same();
+        @include img-ab();
     }
     &#{$imgcon} {
         position: relative;
