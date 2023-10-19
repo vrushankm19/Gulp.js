@@ -6,6 +6,12 @@ html {
     color: $body-color;
 }
 
+body,
+html,
+*{
+    box-sizing: border-box;
+}
+
 * {
     font-family: $pf-font;
 }
