@@ -35,37 +35,37 @@ h6 {
 .h1,
 h1 {
     font-weight: $font-sb;
-    font-size: rem(53px);
+    // font-size: (53px);
 }
 
 .h2,
 h2 {
     font-weight: $font-sb;
-    font-size: rem(36px);
+    // font-size: (36px);
 }
 
 .h3,
 h3 {
     font-weight: $font-sb;
-    font-size: rem(30px);
+    // font-size: (30px);
 }
 
 .h4,
 h4 {
     font-weight: $font-sb;
-    font-size: rem(24px);
+    // font-size: (24px);
 }
 
 .h5,
 h5 {
     font-weight: $font-m;
-    font-size: rem(21px);
+    // font-size: (21px);
 }
 
 .h6,
 h6 {
     font-weight: $font-b;
-    font-size: rem(16px);
+    // font-size: (16px);
 }
 
 p {
@@ -112,7 +112,7 @@ svg {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: rem(calc(1640px + 24px));
+        max-width: (calc(vwh(1400px) + 24px));
     }
 }
 
