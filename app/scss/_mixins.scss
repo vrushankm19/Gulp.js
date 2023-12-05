@@ -116,6 +116,9 @@ $d-flex-v: (
   font-weight: $fw;
   color: $c;
   line-height: $lh;
+  * {
+    font-family: inherit;
+  }
 }
 
 @mixin tm-same() {
@@ -371,6 +374,7 @@ $d-flex-v: (
     }
   } 
 }
+
 
 // @include config-class('icon-',color,
 //     'save' green,

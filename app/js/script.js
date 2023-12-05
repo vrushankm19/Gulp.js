@@ -7,6 +7,18 @@
         // *********************************************
         //     Slider start 🚩
         // ****************************
+        AOS.init();
+        // *********************************************
+        //     Slider start 🚩
+        // ****************************
+        $("[data-popup]").on("click", function () {
+            var activePopup = $($(this).data('popup'));
+            activePopup.css("display", "flex");
+        });
+            
+        $(".close").on("click", function () {
+            $(".overlay").hide();
+        });
     });
 
     // Your Code 🗒️

@@ -5,3 +5,117 @@
 .sc {
     color: $sc;
 }
+
+.btn-primary {
+    &.pc {
+        background-color: $pc;
+        background: $pc;
+        border: 1px solid $pc;
+        padding: vwh(15px) vwh(30px);
+        border-radius: unset;
+        @include typo(vwh(20px), $font-b, #fff, 1.5);
+        @include flex(if, ac, jc);
+        @include flex-gap(0, vwh(8px));
+        border-radius: vwh(10px);
+        transition: $ani-4;
+        span {
+            transition: $ani-2;
+            transform: translateX(vwh(15px));
+            position: relative;
+            z-index: 1;
+            background-color: inherit;
+            // text-wrap: nowrap;
+        }
+    }
+    &.pc:hover {
+        // max-width: vwh(260px);
+        background-color: $white;
+        color: $pc;
+        border: 1px solid $pc;
+        span {
+            transform: translateX(0px);
+        }
+        img {
+            width: vwh(20px);
+            transform: translateX(0px);
+        }
+        // background-position: 100% 100%;
+        // transition: $ani-4;
+        // --bg: -14px -6px 19px -1px rgba(122, 196, 74, 0.43);
+        // box-shadow: var(--bg);
+        // -webkit-box-shadow: var(--bg);
+        // -moz-box-shadow: var(--bg);
+    }
+    &.pc-line{
+        @extend .pc;
+        background-color: transparent;
+        color: $pc;
+        border: 1px solid $pc;
+        &:hover{
+            background-color: $pc;
+            color: $white;
+        }
+    }
+}
+
+.play {
+    text-decoration: none;
+    @include typo(vwh(20px), $font-b, $pc, 1.5);
+    @include flex(if, ac);
+    gap: vwh(10px);
+
+    &-img{
+        @include flex-w(vwh(15px));
+        transform: translateX(vwh(2px));
+        *{
+            fill: $pc;
+            transition: $ani-2;
+        }
+    }
+    &-bg-blur{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include flex-w(vwh(60px));
+        height: vwh(60px);
+        border: 1px solid $pc;
+        border-radius: 100%;
+    }
+    &:hover{
+        color: $pc;
+        .play-img{
+            *{
+                fill: $white;
+            }
+        }
+        .play-bg-blur{
+            background-color: $pc;
+            border: 1px solid $pc;
+            transition: $ani-4;
+            
+        }
+    }
+}
+
+.simpliareps-title{
+    margin-bottom: vwh(40px);
+    &-h2{
+        @include typo(vwh(40px), $font-b,#000);
+        margin-bottom: vwh(10px);
+    }
+    &-h3{
+        @include typo(vwh(15px), $font-r, $pc);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &-p{
+        @include typo(vwh(20px), $font-r,#242424);
+        // margin-top: vwh(20px);
+        max-width: 90%;
+        margin-inline:auto;
+    }
+}
+.simpliareps-center{
+    text-align: center;
+    margin-top: vwh(40px);
+}
