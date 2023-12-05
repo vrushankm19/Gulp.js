@@ -116,9 +116,18 @@ $d-flex-v: (
   font-weight: $fw;
   color: $c;
   line-height: $lh;
+<<<<<<< HEAD
   * {
     font-family: inherit;
   }
+=======
+<<<<<<< HEAD
+  * {
+    font-family: inherit;
+  }
+=======
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 @mixin tm-same() {
@@ -375,7 +384,14 @@ $d-flex-v: (
   } 
 }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 // @include config-class('icon-',color,
 //     'save' green,
 //     'cancel' gray,

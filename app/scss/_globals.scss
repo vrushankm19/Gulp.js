@@ -6,12 +6,21 @@ html {
     color: $body-color;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
 body,
 html,
 *{
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 * {
     font-family: $pf-font;
 }
@@ -35,37 +44,85 @@ h6 {
 .h1,
 h1 {
     font-weight: $font-sb;
+<<<<<<< HEAD
     // font-size: (53px);
+=======
+<<<<<<< HEAD
+    // font-size: (53px);
+=======
+    font-size: rem(53px);
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 .h2,
 h2 {
     font-weight: $font-sb;
+<<<<<<< HEAD
     // font-size: (36px);
+=======
+<<<<<<< HEAD
+    // font-size: (36px);
+=======
+    font-size: rem(36px);
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 .h3,
 h3 {
     font-weight: $font-sb;
+<<<<<<< HEAD
     // font-size: (30px);
+=======
+<<<<<<< HEAD
+    // font-size: (30px);
+=======
+    font-size: rem(30px);
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 .h4,
 h4 {
     font-weight: $font-sb;
+<<<<<<< HEAD
     // font-size: (24px);
+=======
+<<<<<<< HEAD
+    // font-size: (24px);
+=======
+    font-size: rem(24px);
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 .h5,
 h5 {
     font-weight: $font-m;
+<<<<<<< HEAD
     // font-size: (21px);
+=======
+<<<<<<< HEAD
+    // font-size: (21px);
+=======
+    font-size: rem(21px);
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 .h6,
 h6 {
     font-weight: $font-b;
+<<<<<<< HEAD
     // font-size: (16px);
+=======
+<<<<<<< HEAD
+    // font-size: (16px);
+=======
+    font-size: rem(16px);
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
 }
 
 p {
@@ -112,7 +169,15 @@ svg {
     .container-sm,
     .container-xl,
     .container-xxl {
+<<<<<<< HEAD
         max-width: (calc(vwh(1400px) + 24px));
+=======
+<<<<<<< HEAD
+        max-width: (calc(vwh(1400px) + 24px));
+=======
+        max-width: rem(calc(1640px + 24px));
+>>>>>>> 05f6f03 (My Gulp.js V3)
+>>>>>>> master
     }
 }
 
