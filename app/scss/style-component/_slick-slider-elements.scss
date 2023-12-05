@@ -71,11 +71,7 @@
 
 // __________________Slide Gap_____________
 @mixin slider-gap($slide-gap) {
-<<<<<<< HEAD
     &.slick-slider {
-=======
-    .slick-slider {
->>>>>>> 05f6f03 (My Gulp.js V3)
         margin: 0 -#{$slide-gap};
     }
     .slick-slide {
