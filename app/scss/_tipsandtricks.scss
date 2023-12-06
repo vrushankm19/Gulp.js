@@ -1,0 +1,84 @@
+// This For diffrent images logo in view same
+@mixin set-logo {
+    .photos img {
+        width: 15%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+        mix-blend-mode: color-burn;
+    }
+}
+
+// __________________________________notipication_________________
+// <button data-count="9">click me</button>
+@mixin notipication {
+    position: relative;
+    &:before {
+        content: attr(data-count);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+}
+
+// __________________________________________________________________
+// _________________________color find_______________________
+@function find-color($color) {
+    @each $var,
+    $value in $pc,
+    $sc,
+    $white {
+        @if $color==$value {
+            @return $var;
+        }
+    }
+    @return false;
+}
+
+// .list-link {
+//     background-color: find-color(#64902a);
+// }
+// ____________________________horizontal Scroll__________________
+// https://www.homzglobal.com/
+// .high-svg-wrapper {
+//     overflow-x: scroll
+// }
+// .hsw {
+//     width: 950px;
+//     overflow-x: scroll
+// }
+// .high-svg-wrapper svg {
+//     width: 950px
+// }
+// .horizontal-scroll {
+//     animation: hScroll 7s linear forwards;
+//     animation-delay: .5s
+// }
+// @keyframes hScroll {
+//     0 {
+//         transform: translate(0, 0)
+//     }
+//     50% {
+//         transform: translate(-530px, 0)
+//     }
+//     60% {
+//         transform: translate(-530px, 0)
+//     }
+//     100% {
+//         transform: translate(0, 0)
+//     }
+// }
+
+// ____________________________min width__________________
+
+// width: min(100%, rem(696px));
+// min 100% plus 696px

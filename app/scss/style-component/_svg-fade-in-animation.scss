@@ -1,0 +1,97 @@
+// ------------------svg animaion------------------
+// animation-name: fade-in;
+// animation-duration: 1s;
+// animation-timing-function: ease;
+// animation-delay: 0s;
+// animation-iteration-count: 1;
+// animation-direction: normal;
+// animation-fill-mode: both;
+@mixin svg-fade-in($cont, $dure) {
+    &_sub {
+        opacity: 0;
+        animation: fade-in 1s ease 0s normal both;
+    }
+    @for $i from 1 through $cont {
+        &_sub_#{$i} {
+            // -----------function----------
+            $test: calc(#{$dure} * #{$i});
+            animation-delay: #{$test};
+        }
+    }
+}
+
+@mixin svg-fade-in-active($cont, $dure, $className, $active:active, $fadeIn:1s) {
+    .#{$className} {
+        opacity: 0;
+    }
+    &.#{$active} {
+        .#{$className} {
+            animation: fade-in #{$fadeIn} ease 0s normal both;
+        }
+        @for $i from 1 through $cont {
+            .#{$className}-#{$i} {
+                // -----------function----------
+                $test: calc(#{$dure} * #{$i});
+                animation-delay: #{$test};
+            }
+        }
+    }
+}
+
+// _______________html class add in points____________________
+// class="svg-point svg-point_{number of point count Example (1,2,3)}"
+// _______________css____________________
+// .global {
+//     @include svg-fade-in-active(
+//                                 {number of point count Example (1,2,3)}, 
+//                                 0.5s{time delay},
+//                                 {class name Example (svg-point)}},
+//                                 {class active name (class add to animation start)});
+// }
+// .epr-smes {
+//     @include svg-fade-in-active(4,0.3s,b-value,active);
+// }
+// ___________output_________________
+// .epr-smes .b-value {
+//      opacity: 0;
+// }
+//  .epr-smes.active .b-value {
+//      animation: fade-in 1s ease 0s normal both;
+// }
+//  .epr-smes.active .b-value-1 {
+//      animation-delay: calc(0.3s * 1);
+// }
+//  .epr-smes.active .b-value-2 {
+//      animation-delay: calc(0.3s * 2);
+// }
+//  .epr-smes.active .b-value-3 {
+//      animation-delay: calc(0.3s * 3);
+// }
+//  .epr-smes.active .b-value-4 {
+//      animation-delay: calc(0.3s * 4);
+// }
+
+// ___________BETA_____________line animation with svg point____________________
+
+
+@mixin svg-fade-in-active-line($cont, $dl, $dur, $className, $active:active, $fadeIn:1s) {
+    .#{$className} {
+        opacity: 0;
+    }
+    &.#{$active} {
+        .#{$className} {
+            animation: fade-in #{$fadeIn} ease 0s normal both;
+        }
+        @for $i from 1 through $cont {
+            .#{$className}-#{$i} {
+                // -----------function----------
+                $test: calc(#{$dl} * #{$dur * $i});
+                animation-delay: #{$test};
+            }
+        }
+    }
+}
+
+// .epr-smes {
+//     @include svg-fade-in-active(4,0.3s,0.5s,b-value,active);
+// }
