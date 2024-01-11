@@ -1,3 +1,19 @@
+@include max(d-1680) {
+    html,
+    body {
+        $rem-size: 20px;
+        font-size: $rem-size;
+    }
+}
+
+@include max(d-1440) {
+    html,
+    body {
+        $rem-size: 18px;
+        font-size: $rem-size;
+    }
+}
+
 @include max(d-1400) {
     html,
     body {
@@ -12,4 +28,52 @@
     // .container-xxl {
     //     max-width: rem(calc(1088px + 24px));
     // }
+}
+
+@include max(d-1024) {
+    html,
+    body {
+        $rem-size: 12px;
+        font-size: $rem-size;
+    }
+}
+
+@include max(d-820) {
+    html,
+    body {
+        $rem-size: 11px;
+        font-size: $rem-size;
+    }
+}
+
+@include max(d-768) {
+    html,
+    body {
+        $rem-size: 10px;
+        font-size: $rem-size;
+    }
+}
+
+@include max(d-720) {
+    html,
+    body {
+        $rem-size: 9px;
+        font-size: $rem-size;
+    }
+}
+
+@include max(d-600) {
+    html,
+    body {
+        $rem-size: 18px;
+        font-size: $rem-size;
+    }
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        padding-inline: 21px;
+    }
 }

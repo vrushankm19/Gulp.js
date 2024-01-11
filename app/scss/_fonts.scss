@@ -1,26 +1,63 @@
-// Roboto
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-// Futura
 @font-face {
-    font-family: 'Futura';
-    src: url('../font/FuturaBT-Book.woff2') format('woff2'), url('../font/FuturaBT-Book.woff') format('woff');
+    font-family: 'Alegreya';
+    src: url('../font/Alegreya-SemiBold.woff2') format('woff2'),
+        url('../font/Alegreya-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITC Zapf Chancery';
+    src: url('../font/ZapfChanceryITCbyBT-Medium.woff2') format('woff2'),
+        url('../font/ZapfChanceryITCbyBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../font/Alegreya-ExtraBold.woff2') format('woff2'),
+        url('../font/Alegreya-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../font/Alegreya-Regular.woff2') format('woff2'),
+        url('../font/Alegreya-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Futura';
-    src: url('../font/FuturaCyrillic-Demi.woff2') format('woff2'), url('../font/FuturaCyrillic-Demi.woff') format('woff');
+    font-family: 'Alegreya';
+    src: url('../font/Alegreya-Medium.woff2') format('woff2'),
+        url('../font/Alegreya-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Futura';
-    src: url('../font/FuturaBT-Medium.woff2') format('woff2'), url('../font/FuturaBT-Medium.woff') format('woff');
-    font-weight: 600;
+    font-family: 'ITC Zapf Chancery';
+    src: url('../font/ZapfChanceryITCbyBT-Bold.woff2') format('woff2'),
+        url('../font/ZapfChanceryITCbyBT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../font/Alegreya-Bold.woff2') format('woff2'),
+        url('../font/Alegreya-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+

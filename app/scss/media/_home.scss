@@ -1,0 +1,211 @@
+@include max(d-600){
+    .ijt_2024{
+        padding-block: 30px 70px;
+
+        &_flex{
+            flex-direction: column;
+            &_items{
+                &_card{
+                    &_2{
+                        padding: 25px 15px;
+                        &_p{
+                            font-size: 24px;
+                            margin-bottom: 30px;
+                        }
+                        &_h2{
+                            font-size: 32px;
+                            margin-bottom: 18px;
+                        }
+                    }
+                    &_p{
+                        font-size: 30px;
+                        &.meet{
+                            font-size: 19px;
+                        }
+                    }
+                    &_fx{
+                        flex-wrap: wrap;
+                        gap: 20px 0;
+                        &_it{
+                            width: 50%;
+                            flex: 0 0 50%;
+                            &:last-child{
+                                padding-left: unset;
+                            }
+                            &:nth-child(2){
+                                border-right: unset;
+                            }
+                            &_p{
+                                font-size: 18px;
+                                &_data{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    &_1{
+                        &-img{
+                            &-e{
+                                width: 136.64px;
+                            }
+                        }
+                        flex: unset;
+                        width: 100%;
+                        padding: 40px 35px;
+                    }
+                    &_img{
+                        width: 223px;
+                        margin-bottom: 24px;
+                    }
+                    &_pw{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .explore{
+        
+        padding-block: 70px 40px;
+        &_grid{
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 20px;
+            &_items{
+                display: flex;
+                align-items: center;
+                padding: 25px;
+                gap: 30px;
+                &_text{
+                    &_h3{
+                        margin-top: unset;
+                        font-size: 32px;
+                    }
+                    &_p{
+                        font-size: 18px;
+                    }
+                }
+                &_img{
+                    height: auto;
+                    width: 75px;
+                    flex: 0 0 75px;
+                }
+            }
+        }
+    }
+    .lab_grown{
+        &_flex{
+            flex-direction: column;
+            gap: 20px;
+            &_item{
+                &:first-child{
+                    flex: unset;
+                    width: 100%;
+                }
+                &_video{
+                    &_play{
+                        width: 34px;
+                        height: 34px;
+                    }
+                }
+                &_copy{
+                    &_p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .partner{
+        padding-bottom: 60px;
+        .kira_header{
+            margin-bottom: 20px;
+        }
+        &_slider{
+            
+            &_list{
+                padding: unset;
+                &_h3{
+                    font-size: 24px;
+                    margin-top: 22px;
+                }
+                &_p{
+                    font-size: 18px;
+                    
+                }
+                &_count{
+                    position: static;
+                    transform: unset;
+                    width: 60px;
+                    height: 60px;
+                    font-size: 36px;
+                    margin-inline: auto;
+                }
+            }
+        }
+        &_flex{
+            flex-direction: column-reverse;
+            &_items{
+                &:first-child{
+                    flex: unset;
+                    width: 100%;
+                    padding-left: unset;
+                }
+                &:last-child{
+                    flex: unset;
+                    width: 100%;
+                    margin-bottom: 22px;
+                }
+                &_line{
+                    width: 100%;
+                    height: 1px;
+                    left: unset;
+                    top: 30px;
+                    background: rgb(245,203,155);
+                    background: linear-gradient(90deg, rgba(245,203,155,0) 0%, rgba(245,203,155,0.5690651260504201) 6%, rgba(245,203,155,1) 47%, rgba(245,203,155,0.6250875350140056) 94%, rgba(245,203,155,0) 100%);
+                    &::after{
+                        left: 20%;
+                        transform: translate(0%,50%);
+                    }
+                    &::before{
+                        right: 20%;
+                        transform: translate(0%,-50%);
+                    }
+                }
+            }
+        }
+    }
+    .lab_grown{
+        padding-block: 0 40px;
+    }
+    .embrace{
+        background: unset;
+        &-slider{
+            margin-top: 90px;
+            &-start{
+                &-li{
+                    text-align: center;
+                    &-h3{
+                        @include typo(32px, $font-sb, $sc);
+                    }
+                    &-p{
+                        @include typo(18px, $font-r, #D1E7FF);
+                    }
+                }
+            }
+        }
+    }
+    .sustainability{
+        padding-block: 0 40px;
+        &_slider{
+            &_100{
+               &::after{
+                   content: unset;
+               }
+               &::before{
+                   content: unset;
+               } 
+            }
+        }
+    }
+    
+}

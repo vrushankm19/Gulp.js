@@ -65,6 +65,7 @@ h6 {
 p {
     color: $p-color;
     font-weight: $font-r;
+    line-height: 1.4;
 }
 
 a {
@@ -106,7 +107,7 @@ svg {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: rem(calc(1640px + 24px));
+        max-width: rem(calc(1640px + 34px));
     }
 }
 

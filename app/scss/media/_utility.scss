@@ -1,0 +1,56 @@
+@include max(d-600){
+    .btn-primary {
+        &.pc {
+            padding: 15px 37px;
+            @include typo(18px);
+            @include flex-gap(0, 10px);
+            img{
+                @include flex-w(28px);
+            }
+        }
+    }
+    .kira_header{
+        overflow: hidden;
+        &_img{
+            width: 100%;
+            transform: scale(1.5);
+        }
+        &_h2{
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        &_p{
+            font-size: 20px;
+        }
+    }
+    .kira_slider{
+        &_arrow{
+            position: static;
+            transform: unset;
+            &_con{
+                @include flex(f,ac,jc);
+                gap: 20px;
+            }
+            &_prev{
+                transform: scaleX(-1);
+            }
+        }
+    }
+    .kira_form{
+        .form-control{
+            font-size: 18px;
+            @include i-placeholder{
+                font-size: 18px;
+            }
+        }
+        .form-group{
+            &:last-child{
+                grid-area: unset;
+            }
+            &-grid{
+                grid-template-columns: repeat(1,1fr);
+                gap: 20px 0;
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@ $media-max: (
   "d-1200": "1200px",
   "d-1024": "1024px",
   "d-991": "991px",
+  "d-820": "820px",
   "d-768": "768px",
   "d-767": "767px",
   "d-720": "720px",
@@ -116,6 +117,9 @@ $d-flex-v: (
   font-weight: $fw;
   color: $c;
   line-height: $lh;
+  *{
+    font-family: $sf-font;
+  }
 }
 
 @mixin tm-same() {
