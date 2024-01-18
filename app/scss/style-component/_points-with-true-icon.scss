@@ -1,0 +1,27 @@
+@mixin point-true($bgimage, $griditem:1, $ttt, $tt:$ttt) {
+    display: grid;
+    grid-template-columns: repeat($griditem, 1fr);
+    @include flex-gap($ttt, $tt);
+    &-list {
+        position: relative;
+        list-style: none;
+        padding-left: 20px;
+        // color: #fff;
+    }
+    &-list::before {
+        content: "";
+        background-image: url($bgimage);
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 5px;
+        left: 0;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+// .heelo{
+//     @include max("h.png",1,10px);
+// }

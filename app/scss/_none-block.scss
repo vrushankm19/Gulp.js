@@ -1,0 +1,130 @@
+/*/////////////////////////// D-NONE D-BLOCK in Media /////////////////*/
+
+@include max(d-1024) {
+    /*Show and Hide*/
+  
+    @include config-class(
+      "d-1024-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  }
+  
+  @include max(d-991) {
+    /*Show and Hide*/
+  
+    @include config-class(
+      "d-991-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include minmax(d-991, d-1024) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-991T1024-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include minmax(d-768, d-1024) {
+    @include config-class(
+      "d-768T1024-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  /*Show and Hide*/
+  
+  @include max(d-768) {
+    @include config-class(
+      "d-768-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include max(d-767) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-767-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include max(d-600) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-600-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  /*land*/
+  
+  @include max(d-480) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-480-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  
+  @include max(d-375) {
+    /*Show and Hide*/
+    @include config-class(
+      "d-375-",
+      display,
+      "none" none,
+      "none-i" none + !important,
+      "block" block,
+      "block-i" block + !important
+    );
+  
+    /*Show and Hide End*/
+  }
+  

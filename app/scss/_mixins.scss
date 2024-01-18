@@ -1,0 +1,397 @@
+$media-max: (
+  "d-1400": "1400px",
+  "d-1920": "1920px",
+  "d-1680": "1680px",
+  "d-1366": "1366px",
+  "d-1280": "1280px",
+  "d-1200": "1200px",
+  "d-1024": "1024px",
+  "d-991": "991px",
+  "d-768": "768px",
+  "d-767": "767px",
+  "d-720": "720px",
+  "d-710": "710px",
+  "d-640": "640px",
+  "d-600": "600px",
+  "d-480": "480px",
+  "d-414": "414px",
+  "d-375": "375px", 
+  "d-360": "360px", 
+  "d-320": "320px", 
+);
+@mixin max($size) {
+  //1
+  @media (max-width: map-get($media-max, $size)) {
+    @content;
+  }
+}
+
+@mixin min($size) {
+  //1
+  @media (min-width: map-get($media-max, $size)) {
+    @content;
+  }
+}
+
+@mixin minmax($size, $size-2) {
+  //2
+  @media screen and (min-width: map-get($media-max, $size)) and (max-width: map-get($media-max, $size-2)) {
+    @content;
+  }
+}
+
+@mixin grid($items, $gap, $gap-2: $gap) {
+  display: grid;
+  grid-template-columns: repeat($items, 1fr);
+  grid-gap: $gap $gap-2;
+}
+
+@mixin grid-fluid($minw, $gap, $gap-2: $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($minw, 1fr));
+  grid-gap: $gap $gap-2;
+}
+
+$d-flex-v: (
+  "f": flex,
+  "if": inline-flex,
+  "ac": center,
+  "as": flex-start,
+  "ae": flex-end,
+  "jc": center,
+  "js": flex-start,
+  "je": flex-end,
+  "jb": space-between,
+  "dc": column,
+  "dcr": column-reverse,
+  "dr": row,
+  "drr": row-reverse,
+);
+@mixin flex(
+  $display: map-get($d-flex-v, f),
+  $align-item: map-get($d-flex-v, ac),
+  $justify-contant: map-get($d-flex-v, jc),
+  $direction: map-get($d-flex-v, dc)
+) {
+  display: map-get($d-flex-v, $display);
+  flex-direction: map-get($d-flex-v, $direction);
+  align-items: map-get($d-flex-v, $align-item);
+  justify-content: map-get($d-flex-v, $justify-contant);
+}
+
+@mixin flex-center($direction: map-get($d-flex-v, dc)) {
+  display: flex;
+  flex-direction: map-get($d-flex-v, $direction);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin flex-w($flex-wi) {
+  flex: 0 0 $flex-wi;
+  width: $flex-wi;
+}
+
+@mixin flex-equal($flexe: 1, $mine: null, $maxq: null) {
+  flex: $flexe;
+  min-width: $mine;
+  max-width: $maxq;
+}
+
+@mixin flex-gap($flex-g, $flex-g-c: $flex-g) {
+  gap: $flex-g $flex-g-c;
+  grid-gap: $flex-g $flex-g-c;
+}
+
+@mixin typo($fs: null, $fw: null, $c: null, $lh: null) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+  line-height: $lh;
+}
+
+@mixin sf-typo($fs: null, $fw: null, $c: null, $lh: null) {
+  font-family: $sf-font;
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+  line-height: $lh;
+  *{
+    font-family: $sf-font;
+  }
+}
+
+@mixin tm-same() {
+  position: absolute;
+  display: block;
+}
+
+@mixin tm-c() {
+  @include tm-same();
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin tm-jc() {
+  @include tm-same();
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+// _____________________________advance______________________
+// @mixin tm-l() {
+//     @include tm-same();
+//     top: 50%;
+//     left: 0;
+//     transform: translate(0, -50%);
+// }
+// @mixin tm-r() {
+//     @include tm-same();
+//     top: 50%;
+//     right: 0;
+//     transform: translate(0, -50%);
+// }
+@mixin tm-side($rltranfo) {
+  @include tm-same();
+  top: 50%;
+  #{$rltranfo}: 0;
+  transform: translate(0, -50%);
+}
+
+// ______________________________Background Images Mixin____________________
+// @mixin bg-i($link-h) {
+//     background-image: url($link-h);
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+@mixin bg-i-l($link-h, $ee: false) {
+  background-image: url("#{$localbg}/#{$link-h}");
+  background-repeat: no-repeat;
+  background-position: center;
+  @if $ee==w-100 {
+    background-size: 100%;
+  } @else {
+    background-size: cover;
+  }
+}
+
+@mixin bg-i-100($link-h, $ee: false) {
+  background-image: url($link-h);
+  background-repeat: no-repeat;
+  background-position: center;
+  @if $ee==w-100 {
+    background-size: 100%;
+  } @else {
+    background-size: cover;
+  }
+}
+
+// .hh{
+//     @include bg-i("lc.png",w-100);
+// }
+// ______________________________Background Images Mixin end____________________
+@mixin w-h($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin max-w($maxwidth, $ml: auto) {
+  max-width: $maxwidth;
+  margin-inline: $ml;
+}
+
+@mixin minmax-w($maxwidth, $minwidth, $ml: auto) {
+  max-width: $maxwidth;
+  min-width: $minwidth;
+  margin-inline: $ml;
+}
+
+@mixin btn-same {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@mixin btn-bg($color) {
+  @include btn-same();
+  color: #fff;
+  background-color: $color;
+  border-color: $color;
+  &:hover {
+    background-color: mix($color, #000000);
+  }
+}
+
+@mixin btn-li($hw-same) {
+  @extend %btn-same;
+  color: $hw-same;
+  background-color: transparent;
+  border-color: $hw-same;
+  &:hover {
+    background-color: $hw-same;
+    color: #fff;
+  }
+}
+
+@mixin prefix-css($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+// ------------------Placeholder Ui---------------
+@mixin i-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// .global {
+//     @include i-placeholder{
+//         color:red; // you css here for Placeholder...
+//     }
+// }
+// ------------------line Limite---------------
+@mixin line-show($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical; // this Css After Sass compile remove this css
+}
+// .line-show{
+//   -webkit-box-orient: vertical!important; // use this css in html
+// }
+// ------------------Background images---------------
+@mixin bg-ab {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// ------------------scroll Bar---------------
+@mixin scroll {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
+}
+
+// tc
+// lt lc lb
+// bc
+// rb rc rt
+@mixin text-color($val) {
+  position: absolute;
+  display: block;
+  // ------------------Top Bottom Center---------------
+  @if $val==tc {
+    left: 50%;
+    transform: translate(-50%, 0px);
+  } @else if $val==bc {
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0px);
+  }
+  // ------------------Right Left Center---------------
+  @else if $val==rc {
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+  } @else if $val==lc {
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+  }
+  // ------------------Right Left Bottom---------------
+  @else if $val==rb {
+    right: 0;
+    bottom: 0;
+  } @else if $val==lb {
+    left: 0;
+    bottom: 0;
+  }
+  // ------------------Right Left top---------------
+  @else if $val==rt {
+    right: 0;
+    top: 0;
+  } @else if $val==lt {
+    left: 0;
+    top: 0;
+  }
+}
+
+// _______________________Class Generator_____________
+@mixin config-class($preclass, $preval, $colors...) {
+  @each $i in $colors {
+    .#{$preclass}#{nth($i, 1)} {
+      #{$preval}: nth($i, 2);
+    }
+  } 
+}
+
+// @include config-class('icon-',color,
+//     'save' green,
+//     'cancel' gray,
+//     'delete' red);
+
+
+// ___________________________none block_____________________
+
+// @mixin max-none-block($display) {
+//     @include max($display) {
+//         @include config-class(
+//         "#{$display}",
+//         display,
+//         "none" none,
+//         "none-i" none + !important,
+//         "block" block,
+//         "block-i" block + !important
+//         );
+//     }
+// }
