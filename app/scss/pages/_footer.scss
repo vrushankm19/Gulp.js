@@ -1,8 +1,0 @@
-.kira_footer{
-    &_p{
-        margin-bottom: unset;
-        @include typo(rem(18px), $font-r, #051223);
-        padding-block: rem(25px);
-        text-align: center;
-    }
-}
