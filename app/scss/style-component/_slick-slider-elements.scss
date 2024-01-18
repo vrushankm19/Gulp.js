@@ -71,8 +71,8 @@
 
 // __________________Slide Gap_____________
 @mixin slider-gap($slide-gap) {
-    .slick-slider {
-        margin: 0 -#{$slide-gap};
+    &.slick-slider {
+        margin-inline: 0 -#{$slide-gap};
     }
     .slick-slide {
         margin-right: #{$slide-gap};
