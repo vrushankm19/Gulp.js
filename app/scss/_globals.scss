@@ -99,16 +99,16 @@ svg {
     appearance: none;
 }
 
-@media (max-width: 1920px) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: rem(calc(1640px + 24px));
-    }
-}
+// @media (max-width: 1920px) {
+//     .container,
+//     .container-lg,
+//     .container-md,
+//     .container-sm,
+//     .container-xl,
+//     .container-xxl {
+//         max-width: rem(calc(1640px + 24px));
+//     }
+// }
 
 // @include max(d-1400) {
 //     .container,
